@@ -18,16 +18,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        api.login(email: "test@test.com", password: "1212") { (result) in
-            switch result {
-            case true:
-                debugPrint("로그인 한 상태.")
-            case false:
-                debugPrint("로그인 안된 상태.")
+        if let accessToken = UserDefaultsManager.shared.getAccessToken() {
+            api.loginCheck() { (result) in
+                debugPrint("login check result : \(result)")
+            }
+        } else {
+            api.login(email: "test@test.com", password: "1212") { (result) in
+                switch result {
+                case true:
+                    debugPrint("login try success")
+                case false:
+                    debugPrint("login try fail.")
+                }
             }
         }
-        
+
         return true
     }
 }

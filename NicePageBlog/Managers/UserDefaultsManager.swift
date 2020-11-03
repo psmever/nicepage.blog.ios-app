@@ -56,6 +56,15 @@ class UserDefaultsManager {
         UserDefaults.standard.synchronize()
     }
     
+    func deleteAllData() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+
+        dictionary.keys.forEach {
+            key in   defaults.removeObject(forKey: key)
+        }
+    }
+    
 
 }
 

@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 extension NetworkManager: RequestInterceptor {
     
@@ -21,39 +22,56 @@ extension NetworkManager: RequestInterceptor {
     }
     
     
-    func retry(_ request: Request, for session: Session, dueTo error: Error,
-               completion: @escaping (RetryResult) -> Void) {
+    func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         guard request.retryCount < retryLimit else {
             completion(.doNotRetry)
             return
         }
-        print("\nretried; retry count: \(request.retryCount)\n")
         refreshToken { isSuccess in
             isSuccess ? completion(.retry) : completion(.doNotRetry)
         }
     }
     
-    
-    
     func refreshToken(completion: @escaping (_ isSuccess: Bool) -> Void) {
         
-        AF.request( Environment.ServerBaseURL.absoluteString + "/api/v1/auth/token-refresh", method: .post, encoding: JSONEncoding.default).responseJSON { response in
+        if let refreshToken = UserDefaultsManager.shared.getRefreshToken() {
             
-            debugPrint(":: token-refresh ::")
-            debugPrint(response)
+            let headers: HTTPHeaders = [
+                "Request-Client-Type" : "S01010",
+                "Content-Type" : "application/json",
+                "Accept" : "application/json"
+            ]
             
-            if let data = response.data, let token = (try? JSONSerialization.jsonObject(with: data, options: [])
-                as? [String: Any])?["access_token"] as? String {
-                
-                debugPrint(response.data)
-                
-                
-//                UserDefaultsManager.shared.setToken(token: token)
-//                print("\nRefresh token completed successfully. New token is: \(token)\n")
-                completion(true)
-            } else {
-                completion(false)
-            }
+            let PARAM: Parameters = [
+                "refresh_token": refreshToken
+            ]
+            
+            AF.request(
+                Environment.ServerBaseURL.absoluteString + "/api/v1/auth/token-refresh",
+                method: .post,
+                parameters: PARAM,
+                encoding: JSONEncoding.default,
+                headers: headers
+            ).validate().responseData(completionHandler: { response in
+                if let code = response.response?.statusCode {
+                    switch code {
+                        case 200:
+                            let refreshResult = JSON(response.value)
+                            let accessToken: String = refreshResult["access_token"].stringValue
+                            let refreshToken: String = refreshResult["refresh_token"].stringValue
+                            
+                            UserDefaultsManager.shared.setAccessToken(token: accessToken)
+                            UserDefaultsManager.shared.setRefreshToken(token: refreshToken)
+                            
+                            debugPrint("Refresh token completed successfully.")
+                        default:
+                            debugPrint("Refresh token completed fail.")
+                            UserDefaultsManager.shared.deleteAllData()
+                    }
+                }
+            })
+        } else {
+            debugPrint("refresh try get token error")
         }
     }
 }
