@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9312ABD025515432002FEFF7 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9312ABCF25515432002FEFF7 /* Users.swift */; };
+		9312ABD42551545A002FEFF7 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9312ABD32551545A002FEFF7 /* APIErrorResponse.swift */; };
+		93215E4E2547ABCF002BB428 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93215E4D2547ABCF002BB428 /* Launch Screen.storyboard */; };
+		93215E582547BA19002BB428 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93215E572547BA19002BB428 /* Environment.swift */; };
+		93215E612547D99B002BB428 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93215E602547D99B002BB428 /* Alamofire */; };
+		93253BA125471C5E00DEDF37 /* NicePageBlogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93253BA025471C5E00DEDF37 /* NicePageBlogApp.swift */; };
+		93253BA325471C5E00DEDF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93253BA225471C5E00DEDF37 /* ContentView.swift */; };
+		93253BA525471C5F00DEDF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93253BA425471C5F00DEDF37 /* Assets.xcassets */; };
+		93253BA825471C5F00DEDF37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93253BA725471C5F00DEDF37 /* Preview Assets.xcassets */; };
+		93702DDE254BE30700D0B91F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 93702DDD254BE30700D0B91F /* SwiftyJSON */; };
+		93702DE3254BF23400D0B91F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93702DE2254BF23400D0B91F /* API.swift */; };
+		93D5356E254A9838002769C8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D5356D254A9838002769C8 /* NetworkManager.swift */; };
+		93D53583254AB858002769C8 /* NetworkManager+RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D53582254AB858002769C8 /* NetworkManager+RequestInterceptor.swift */; };
+		93D53586254AB899002769C8 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D53585254AB899002769C8 /* UserDefaultsManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9312ABCF25515432002FEFF7 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		9312ABD32551545A002FEFF7 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		93215E4D2547ABCF002BB428 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		93215E572547BA19002BB428 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; usesTabs = 0; };
+		93253B9D25471C5E00DEDF37 /* NicePageBlog-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NicePageBlog-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93253BA025471C5E00DEDF37 /* NicePageBlogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePageBlogApp.swift; sourceTree = "<group>"; };
+		93253BA225471C5E00DEDF37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93253BA425471C5F00DEDF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93253BA725471C5F00DEDF37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93253BA925471C5F00DEDF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93702DE2254BF23400D0B91F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		93D5356D254A9838002769C8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		93D53582254AB858002769C8 /* NetworkManager+RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+RequestInterceptor.swift"; sourceTree = "<group>"; };
+		93D53585254AB899002769C8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93253B9A25471C5E00DEDF37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93702DDE254BE30700D0B91F /* SwiftyJSON in Frameworks */,
+				93215E612547D99B002BB428 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9312ABCD255153F8002FEFF7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				93D53585254AB899002769C8 /* UserDefaultsManager.swift */,
+				93D5356D254A9838002769C8 /* NetworkManager.swift */,
+				93D53582254AB858002769C8 /* NetworkManager+RequestInterceptor.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		93215E5D2547C1E2002BB428 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				93215E572547BA19002BB428 /* Environment.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		93253B9425471C5E00DEDF37 = {
+			isa = PBXGroup;
+			children = (
+				93253B9F25471C5E00DEDF37 /* NicePageBlog */,
+				93253B9E25471C5E00DEDF37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93253B9E25471C5E00DEDF37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93253B9D25471C5E00DEDF37 /* NicePageBlog-Debug.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93253B9F25471C5E00DEDF37 /* NicePageBlog */ = {
+			isa = PBXGroup;
+			children = (
+				9312ABCD255153F8002FEFF7 /* Managers */,
+				93D5355D254A55CE002769C8 /* Network */,
+				93215E5D2547C1E2002BB428 /* Common */,
+				93253BA025471C5E00DEDF37 /* NicePageBlogApp.swift */,
+				93253BA225471C5E00DEDF37 /* ContentView.swift */,
+				93253BA425471C5F00DEDF37 /* Assets.xcassets */,
+				93253BA925471C5F00DEDF37 /* Info.plist */,
+				93215E4D2547ABCF002BB428 /* Launch Screen.storyboard */,
+				93253BA625471C5F00DEDF37 /* Preview Content */,
+			);
+			path = NicePageBlog;
+			sourceTree = "<group>";
+		};
+		93253BA625471C5F00DEDF37 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				93253BA725471C5F00DEDF37 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		933EA118255180190052AB2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9312ABCF25515432002FEFF7 /* Users.swift */,
+				9312ABD32551545A002FEFF7 /* APIErrorResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93D5355D254A55CE002769C8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				933EA118255180190052AB2F /* Model */,
+				93702DE2254BF23400D0B91F /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93253B9C25471C5E00DEDF37 /* NicePageBlog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93253BAC25471C5F00DEDF37 /* Build configuration list for PBXNativeTarget "NicePageBlog" */;
+			buildPhases = (
+				93253B9925471C5E00DEDF37 /* Sources */,
+				93253B9A25471C5E00DEDF37 /* Frameworks */,
+				93253B9B25471C5E00DEDF37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicePageBlog;
+			packageProductDependencies = (
+				93215E602547D99B002BB428 /* Alamofire */,
+				93702DDD254BE30700D0B91F /* SwiftyJSON */,
+			);
+			productName = NicePageBlog;
+			productReference = 93253B9D25471C5E00DEDF37 /* NicePageBlog-Debug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93253B9525471C5E00DEDF37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					93253B9C25471C5E00DEDF37 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 93253B9825471C5E00DEDF37 /* Build configuration list for PBXProject "NicePageBlog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93253B9425471C5E00DEDF37;
+			packageReferences = (
+				93215E5F2547D99B002BB428 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				93702DDC254BE30700D0B91F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				9312AB9E255119AD002FEFF7 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
+			productRefGroup = 93253B9E25471C5E00DEDF37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93253B9C25471C5E00DEDF37 /* NicePageBlog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93253B9B25471C5E00DEDF37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93215E4E2547ABCF002BB428 /* Launch Screen.storyboard in Resources */,
+				93253BA825471C5F00DEDF37 /* Preview Assets.xcassets in Resources */,
+				93253BA525471C5F00DEDF37 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93253B9925471C5E00DEDF37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D5356E254A9838002769C8 /* NetworkManager.swift in Sources */,
+				93253BA325471C5E00DEDF37 /* ContentView.swift in Sources */,
+				93D53586254AB899002769C8 /* UserDefaultsManager.swift in Sources */,
+				9312ABD42551545A002FEFF7 /* APIErrorResponse.swift in Sources */,
+				93215E582547BA19002BB428 /* Environment.swift in Sources */,
+				93253BA125471C5E00DEDF37 /* NicePageBlogApp.swift in Sources */,
+				9312ABD025515432002FEFF7 /* Users.swift in Sources */,
+				93702DE3254BF23400D0B91F /* API.swift in Sources */,
+				93D53583254AB858002769C8 /* NetworkManager+RequestInterceptor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		93253BAA25471C5F00DEDF37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93253BAB25471C5F00DEDF37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93253BAD25471C5F00DEDF37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = Debug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-${BUNDLE_ID_SUFFIX}";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_ID_SUFFIX = Debug;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NicePageBlog/Preview Content\"";
+				DEVELOPMENT_TEAM = AYS4T8E9L8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NicePageBlog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.pe.nicepage.blog.NicePageBlog.${BUNDLE_ID_SUFFIX}";
+				PRODUCT_NAME = "$(TARGET_NAME)-${BUNDLE_ID_SUFFIX}";
+				SERVER_BASE_URL = "http://blog.backend.test";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93253BAE25471C5F00DEDF37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = NicePageBlog;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-${BUNDLE_ID_SUFFIX}";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_ID_SUFFIX = Release;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NicePageBlog/Preview Content\"";
+				DEVELOPMENT_TEAM = AYS4T8E9L8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NicePageBlog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.pe.nicepage.blog.NicePageBlog.${BUNDLE_ID_SUFFIX}";
+				PRODUCT_NAME = "$(TARGET_NAME)-${BUNDLE_ID_SUFFIX}";
+				SERVER_BASE_URL = "https://blog-api.nicepage.pe.kr";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93253BB025471D6100DEDF37 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		93253BB125471D6100DEDF37 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = Staging;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-${BUNDLE_ID_SUFFIX}";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_ID_SUFFIX = Staging;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NicePageBlog/Preview Content\"";
+				DEVELOPMENT_TEAM = AYS4T8E9L8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NicePageBlog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.pe.nicepage.blog.NicePageBlog.${BUNDLE_ID_SUFFIX}";
+				PRODUCT_NAME = "$(TARGET_NAME)-${BUNDLE_ID_SUFFIX}";
+				SERVER_BASE_URL = "http://psmever.iptime.org:8081";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93253B9825471C5E00DEDF37 /* Build configuration list for PBXProject "NicePageBlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93253BAA25471C5F00DEDF37 /* Debug */,
+				93253BB025471D6100DEDF37 /* Staging */,
+				93253BAB25471C5F00DEDF37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93253BAC25471C5F00DEDF37 /* Build configuration list for PBXNativeTarget "NicePageBlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93253BAD25471C5F00DEDF37 /* Debug */,
+				93253BB125471D6100DEDF37 /* Staging */,
+				93253BAE25471C5F00DEDF37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9312AB9E255119AD002FEFF7 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+		93215E5F2547D99B002BB428 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+		93702DDC254BE30700D0B91F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93215E602547D99B002BB428 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93215E5F2547D99B002BB428 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		93702DDD254BE30700D0B91F /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93702DDC254BE30700D0B91F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 93253B9525471C5E00DEDF37 /* Project object */;
+}
