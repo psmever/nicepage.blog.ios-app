@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "93253B9C25471C5E00DEDF37"
-               BuildableName = "NicePageBlog-Release.app"
+               BuildableName = "NicePageBlog-Debug.app"
                BlueprintName = "NicePageBlog"
                ReferencedContainer = "container:NicePageBlog.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93253B9C25471C5E00DEDF37"
-            BuildableName = "NicePageBlog-Release.app"
+            BuildableName = "NicePageBlog-Debug.app"
             BlueprintName = "NicePageBlog"
             ReferencedContainer = "container:NicePageBlog.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93253B9C25471C5E00DEDF37"
-            BuildableName = "NicePageBlog-Release.app"
+            BuildableName = "NicePageBlog-Debug.app"
             BlueprintName = "NicePageBlog"
             ReferencedContainer = "container:NicePageBlog.xcodeproj">
          </BuildableReference>
