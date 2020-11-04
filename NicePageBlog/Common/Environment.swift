@@ -47,4 +47,12 @@ public enum Environment {
         
         return url
     }()
+    
+    static let EnvironmentName: String = {
+        
+        
+        
+        return "Test"
+        
+    }()
 }
