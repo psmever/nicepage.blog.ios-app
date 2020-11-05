@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  LoginViewData.swift
 //  NicePageBlog
 //
 //  Created by sm on 2020/11/04.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoginViewController: ObservableObject {
+class LoginViewData: ObservableObject {
     
     lazy var api: Api = {
         return Api()

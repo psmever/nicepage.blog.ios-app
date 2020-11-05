@@ -24,3 +24,18 @@ struct UserInfo: Codable {
     let nickname: String
     let email: String
 }
+
+struct CodeInfo: Codable {
+    let code_id: String
+    let code_name: String
+}
+
+struct UserDetailInfo: Codable {
+    let user_uuid: String
+    let user_type: CodeInfo
+    let user_level: CodeInfo
+    let name: String
+    let nickname: String
+    let email: String
+    let active: String
+}

@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  PostsViewData.swift
 //  NicePageBlog
 //
 //  Created by sm on 2020/11/05.
@@ -7,12 +7,9 @@
 
 import Foundation
 
-class MainViewController : ObservableObject {
-    
-    
-//    @Published var getPostListResult: PostItem?
+class PostsViewData : ObservableObject {
 
-    @Published var getListResult = [PostItem]()
+    @Published var posts = [PostItem]()
     
     lazy var api: Api = {
         return Api()
@@ -20,27 +17,21 @@ class MainViewController : ObservableObject {
     
     init() {
         debugPrint("MainViewController init")
-        
-        
         self.getPosts()
-        
-        
     }
-    
     
     func getPosts() {
         api.getPostList() { (state, result) in
 
-            if let decodedData = result?.posts {
-                self.getListResult = decodedData
+            if let postResultData = result?.posts {
+                
+                DispatchQueue.main.async {
+                    self.posts = postResultData
+                }
+                
             } else {
                 debugPrint("get error")
             }
-          
-
         }
     }
-    
-    
-   
 }

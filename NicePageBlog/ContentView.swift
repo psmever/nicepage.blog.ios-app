@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var mainData: MainData = MainData()
+    
     var body: some View {
-        Text("Hello, psmever's Blog")
-            .padding()
+        if mainData.loginCheck {
+            return AnyView(PostsView())
+        }else {
+            return AnyView(LoginView())
+        }
     }
 }
 

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RemoteImage: View {
+struct PostImage: View {
     private enum LoadState {
         case loading, success, failure
     }

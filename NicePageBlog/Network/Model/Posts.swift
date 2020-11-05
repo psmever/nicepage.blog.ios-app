@@ -36,3 +36,17 @@ struct TagsItem: Codable {
     let tag_id: String
     let tag_text: String
 }
+
+struct PostDetail: Codable {
+    let post_uuid: String
+    let user: UserDetailInfo
+    let post_title: String
+    let slug_title: String
+    let contents_html: String
+    let contents_text: String
+    let markdown: String
+    let tags: [TagsItem]
+    let view_count: Int
+    let detail_created: String
+    let detail_updated: String
+}

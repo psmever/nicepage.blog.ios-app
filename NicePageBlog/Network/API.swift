@@ -71,5 +71,18 @@ final class Api {
         }
     }
     
+    func getPostDetailData(_ slug_title: String, completion: @escaping (Bool, PostDetail?) -> Void) {
+        NetworkManager.shared.request(Environment.ServerBaseURL.absoluteString + "/api/v1/post/글-등록-테스트/detail", method: .get) { ( result: Result<PostDetail, ErrorResponse> ) in
+            debugPrint(result)
+            switch result{
+            case .success(let result):
+                completion(true, result)
+            case .failure(let error):
+                debugPrint("post error: \(error)")
+                completion(false, nil)
+            }
+        }
+    }
+    
     
 }
