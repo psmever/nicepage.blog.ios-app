@@ -30,12 +30,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 
 
-        if let accessToken = UserDefaultsManager.shared.getAccessToken() {
-            api.loginCheck() { (result) in
-                debugPrint("login check result : \(result)")
-            }
-        }
-
+//        if let accessToken = UserDefaultsManager.shared.getAccessToken() {
+//            api.loginCheck() { (result) in
+//                debugPrint("login check result : \(result)")
+//            }
+//        }
         return true
     }
 }

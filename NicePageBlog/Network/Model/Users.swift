@@ -17,3 +17,10 @@ struct Login: Codable {
 struct LoginCheck: Codable {
     let user_uuid: String
 }
+
+struct UserInfo: Codable {
+    let user_uuid: String
+    let name: String
+    let nickname: String
+    let email: String
+}

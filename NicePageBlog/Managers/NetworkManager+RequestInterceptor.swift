@@ -72,6 +72,7 @@ extension NetworkManager: RequestInterceptor {
             })
         } else {
             debugPrint("refresh try get token error")
+            completion(false)
         }
     }
 }
