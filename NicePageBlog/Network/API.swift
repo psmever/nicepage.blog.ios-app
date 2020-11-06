@@ -28,7 +28,7 @@ final class Api {
             case .success(let result):
                 let access_token: String = result.access_token
                 let refresh_token: String = result.refresh_token
-                let expires_in: Int = result.expires_in
+//                let expires_in: Int = result.expires_in
                 
                 if(access_token.count > 0 && refresh_token.count > 0) {
                     UserDefaultsManager.shared.setAccessToken(token: access_token)
@@ -70,8 +70,7 @@ final class Api {
     }
     
     func getPostDetailData(_ slug_title: String, completion: @escaping (Bool, PostDetail?) -> Void) {
-        NetworkManager.shared.request(Environment.ServerBaseURL.absoluteString + "/api/v1/post/글-등록-테스트/detail", method: .get) { ( result: Result<PostDetail, ErrorResponse> ) in
-            debugPrint(result)
+        NetworkManager.shared.request(Environment.ServerBaseURL.absoluteString + "/api/v1/post/\(slug_title)/detail", method: .get) { ( result: Result<PostDetail, ErrorResponse> ) in
             switch result{
             case .success(let result):
                 completion(true, result)

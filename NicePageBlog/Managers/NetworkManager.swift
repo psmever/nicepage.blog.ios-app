@@ -40,6 +40,12 @@ class NetworkManager : NSObject{
             "Content-Type" : "application/json",
             "Accept" : "application/json",
         ]
+        
+        let urlString = url
+        let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let url = URL(string: encodedString)!
+
+
 
         AF.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers, interceptor: interceptor ?? self).validate().responseData( completionHandler: {response in
         switch response.result {
@@ -51,7 +57,7 @@ class NetworkManager : NSObject{
                             completion(.success(try JSONDecoder().decode(T.self, from: res)))
                         } catch let error {
                             // TODO: json 디코딩 실패.
-                            debugPrint(error)
+                            debugPrint("response decoding error : \(error)")
                             print(String(data: res, encoding: .utf8) ?? "nothing received")
                         }
                     default:
@@ -66,7 +72,7 @@ class NetworkManager : NSObject{
                     }
                 } else {
                     debugPrint(error)
-                    completion(.failure(ErrorResponse(error_message: "데이터 처리중 문제가 발생했습니다.")))
+                    completion(.failure(ErrorResponse(error_message: "통신 오류가 발생했습니다.")))
                 }
 
             }

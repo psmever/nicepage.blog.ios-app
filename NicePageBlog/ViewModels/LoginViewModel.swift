@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoginViewData: ObservableObject {
+class LoginViewModel: ObservableObject {
     
     lazy var api: Api = {
         return Api()
@@ -22,11 +22,6 @@ class LoginViewData: ObservableObject {
     public var password: String = ""
     
     public func handleLoginButtonClick() -> Void {
-        
-        UserDefaultsManager.shared.deleteAllData()
-        
-        debugPrint(" email: \(email) password: \(password)")
-        debugPrint("handleLoginButtonClick")
         debugPrint(showingAlert)
         
         guard !email.isEmpty, !password.isEmpty else {

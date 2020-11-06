@@ -21,17 +21,17 @@ struct LazyView<Content: View>: View {
 struct PostsView: View {
     
     
-    @ObservedObject var postsViewData: PostsViewData
+    @ObservedObject var postsViewModel: PostsViewModel
     
-    init(postsViewData: PostsViewData = PostsViewData()) {
+    init(postsViewModel: PostsViewModel = PostsViewModel()) {
         /// This is example view-mdel implemented for demo purpose.
-        self.postsViewData = postsViewData
+        self.postsViewModel = postsViewModel
     }
     
     var body: some View{
         NavigationView {
 
-            List(postsViewData.posts , id: \.post_id) { post in
+            List(postsViewModel.posts , id: \.post_id) { post in
                 NavigationLink(destination: LazyView(PostDetailView(post.slug_title))) {
                     VStack(alignment: .leading) {
                         CardView(

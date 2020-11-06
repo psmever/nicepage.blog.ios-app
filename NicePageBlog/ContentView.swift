@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var mainData: MainData = MainData()
+    @ObservedObject var mainViewModel: MainViewModel = MainViewModel()
     
     var body: some View {
-        if mainData.loginCheck {
+        if mainViewModel.loginCheck {
             return AnyView(PostsView())
         }else {
             return AnyView(LoginView())

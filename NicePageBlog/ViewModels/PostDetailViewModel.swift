@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PostDetailData : ObservableObject {
+class PostDetailViewModel : ObservableObject {
     
     lazy var api: Api = {
         return Api()
@@ -15,14 +15,20 @@ class PostDetailData : ObservableObject {
     
     @Published var post_slug_title: String = ""
     
+    
+    
     init() {
-        debugPrint("PostDetailData init()")
+
     }
     
     
     public func getPostDetailData(slug_title: String) {
-        api.getPostDetailData("글-등록-테스트") { (status, result) in
-            debugPrint("postDetail status: \(status)\n result: \(result)")
+        api.getPostDetailData(slug_title) { (status, result) in
+            debugPrint("postDetail status: \(status)\n result: \(result?.post_title)")
+            
+            if let s = status as? Bool, s == true, let r = result {
+                debugPrint(r)
+            }
         }
     }
     

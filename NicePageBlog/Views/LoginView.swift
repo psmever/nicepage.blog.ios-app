@@ -23,7 +23,7 @@ struct Background<Content: View>: View {
 
 struct LoginView: View {
     
-    @ObservedObject var loginViewData: LoginViewData = LoginViewData()
+    @ObservedObject var loginViewModel: LoginViewModel = LoginViewModel()
     
     @State private var email: String = ""
     @State private var password: String = ""
@@ -32,7 +32,7 @@ struct LoginView: View {
     let verticalPaddingForForm = 40.0
     
     var body: some View {
-        if(loginViewData.loginStatus) {
+        if(loginViewModel.loginStatus) {
             VStack{
                 PostsView()
             }
@@ -48,7 +48,7 @@ struct LoginView: View {
                             .foregroundColor(Color.white)
                         HStack {
                             Image(systemName: "person").foregroundColor(.secondary)
-                            TextField("이메일", text: $loginViewData.email).foregroundColor(Color.black)
+                            TextField("이메일", text: $loginViewModel.email).foregroundColor(Color.black)
                         }
                         .padding()
                         .background(Color.white)
@@ -56,13 +56,13 @@ struct LoginView: View {
                         
                         HStack {
                             Image(systemName: "person").foregroundColor(.secondary)
-                            SecureField("비밀번호", text: $loginViewData.password).foregroundColor(Color.black)
+                            SecureField("비밀번호", text: $loginViewModel.password).foregroundColor(Color.black)
                         }
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
                         
-                        Button(action: loginViewData.handleLoginButtonClick) {
+                        Button(action: loginViewModel.handleLoginButtonClick) {
                             Text("로그인")
                             .padding()
                             
@@ -72,7 +72,7 @@ struct LoginView: View {
                         .cornerRadius(10)
                         
                     }.padding(.horizontal, CGFloat(verticalPaddingForForm))
-                    .alert(isPresented: $loginViewData.showingAlert, title: loginViewData.alertTitle, message: loginViewData.alertMEssage)
+                    .alert(isPresented: $loginViewModel.showingAlert, title: loginViewModel.alertTitle, message: loginViewModel.alertMEssage)
                 }
             
             }.onTapGesture {

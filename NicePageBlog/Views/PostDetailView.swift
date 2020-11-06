@@ -9,19 +9,19 @@ import SwiftUI
 
 struct PostDetailView: View {
     
-    @ObservedObject var postDetailData: PostDetailData
+    @ObservedObject var postDetailViewModel: PostDetailViewModel
     
     var slugTitle: String = ""
     
-    init(_ SlugTitle: String , postDetailData: PostDetailData = PostDetailData()) {
+    init(_ SlugTitle: String , postDetailViewModel: PostDetailViewModel = PostDetailViewModel()) {
         /// This is example view-mdel implemented for demo purpose.
-        self.postDetailData = postDetailData
+        self.postDetailViewModel = postDetailViewModel
         
-        postDetailData.getPostDetailData(slug_title: SlugTitle)
+        postDetailViewModel.getPostDetailData(slug_title: SlugTitle)
     }
 
     var body: some View {
-        Text(postDetailData.post_slug_title)
+        Text(postDetailViewModel.post_slug_title)
     }
 }
 

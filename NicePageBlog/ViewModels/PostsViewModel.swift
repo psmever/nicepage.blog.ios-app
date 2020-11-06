@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PostsViewData : ObservableObject {
+class PostsViewModel : ObservableObject {
 
     @Published var posts = [PostItem]()
     
@@ -16,7 +16,6 @@ class PostsViewData : ObservableObject {
     }()
     
     init() {
-        debugPrint("MainViewController init")
         self.getPosts()
     }
     
@@ -30,7 +29,7 @@ class PostsViewData : ObservableObject {
                 }
                 
             } else {
-                debugPrint("get error")
+//                debugPrint("get error")
             }
         }
     }

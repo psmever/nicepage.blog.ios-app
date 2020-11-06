@@ -33,8 +33,8 @@ struct PostItem: Codable {
 }
 
 struct TagsItem: Codable {
-    let tag_id: String
-    let tag_text: String
+    let tag_id: String?
+    let tag_text: String?
 }
 
 struct PostDetail: Codable {
@@ -45,7 +45,7 @@ struct PostDetail: Codable {
     let contents_html: String
     let contents_text: String
     let markdown: String
-    let tags: [TagsItem]
+    let tags: [TagsItem]?
     let view_count: Int
     let detail_created: String
     let detail_updated: String

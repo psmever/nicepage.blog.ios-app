@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class MainData: ObservableObject  {
+final class MainViewModel: ObservableObject  {
     
     @Published var loginCheck: Bool = false
     
@@ -17,18 +17,12 @@ final class MainData: ObservableObject  {
     }()
     
     init() {
-        debugPrint("MainData init()")
         self.checkLogin()
     }
     
     public func checkLogin() {
-        
-        debugPrint(UserDefaultsManager.shared.getAccessToken())
-        debugPrint(UserDefaultsManager.shared.getRefreshToken())
-       
         if UserDefaultsManager.shared.getAccessToken() != nil {
             api.loginCheck() { (result) in
-                debugPrint("login check result : \(result)")
                 self.loginCheck = result
             }
         }
