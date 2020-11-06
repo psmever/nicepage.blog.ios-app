@@ -32,7 +32,7 @@ struct PostsView: View {
         NavigationView {
 
             List(postsViewModel.posts , id: \.post_id) { post in
-                NavigationLink(destination: LazyView(PostDetailView(post.slug_title))) {
+                NavigationLink(destination: LazyView(PostDetailView(viewModel: PostDetailView.ViewModel(), SlugTitle: post.slug_title))) {
                     VStack(alignment: .leading) {
                         CardView(
                             imageURL: post.thumb_url,

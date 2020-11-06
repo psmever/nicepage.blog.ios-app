@@ -1,5 +1,5 @@
 //
-//  LoginViewData.swift
+//  LoginViewModel.swift
 //  NicePageBlog
 //
 //  Created by sm on 2020/11/04.

@@ -13,7 +13,7 @@
 		93215E582547BA19002BB428 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93215E572547BA19002BB428 /* Environment.swift */; };
 		93215E612547D99B002BB428 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93215E602547D99B002BB428 /* Alamofire */; };
 		93253BA125471C5E00DEDF37 /* NicePageBlogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93253BA025471C5E00DEDF37 /* NicePageBlogApp.swift */; };
-		93253BA325471C5E00DEDF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93253BA225471C5E00DEDF37 /* ContentView.swift */; };
+		93253BA325471C5E00DEDF37 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93253BA225471C5E00DEDF37 /* MainView.swift */; };
 		93253BA525471C5F00DEDF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93253BA425471C5F00DEDF37 /* Assets.xcassets */; };
 		93253BA825471C5F00DEDF37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93253BA725471C5F00DEDF37 /* Preview Assets.xcassets */; };
 		93294DDA2554479A00D4D4B1 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93294DD92554479A00D4D4B1 /* PostDetailView.swift */; };
@@ -42,7 +42,7 @@
 		93215E572547BA19002BB428 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; usesTabs = 0; };
 		93253B9D25471C5E00DEDF37 /* NicePageBlog-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NicePageBlog-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93253BA025471C5E00DEDF37 /* NicePageBlogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePageBlogApp.swift; sourceTree = "<group>"; };
-		93253BA225471C5E00DEDF37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93253BA225471C5E00DEDF37 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		93253BA425471C5F00DEDF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93253BA725471C5F00DEDF37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93253BA925471C5F00DEDF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				93D5355D254A55CE002769C8 /* Network */,
 				93215E5D2547C1E2002BB428 /* Common */,
 				93253BA025471C5E00DEDF37 /* NicePageBlogApp.swift */,
-				93253BA225471C5E00DEDF37 /* ContentView.swift */,
+				93253BA225471C5E00DEDF37 /* MainView.swift */,
 				93253BA425471C5F00DEDF37 /* Assets.xcassets */,
 				93253BA925471C5F00DEDF37 /* Info.plist */,
 				93215E4D2547ABCF002BB428 /* Launch Screen.storyboard */,
@@ -283,7 +283,7 @@
 				938CD8BC2553AA2A005D8ABB /* PostsView.swift in Sources */,
 				93A22F202554389800BC1D94 /* MainViewModel.swift in Sources */,
 				93D5356E254A9838002769C8 /* NetworkManager.swift in Sources */,
-				93253BA325471C5E00DEDF37 /* ContentView.swift in Sources */,
+				93253BA325471C5E00DEDF37 /* MainView.swift in Sources */,
 				93D53586254AB899002769C8 /* UserDefaultsManager.swift in Sources */,
 				9312ABD42551545A002FEFF7 /* APIErrorResponse.swift in Sources */,
 				938CD8CE2553C590005D8ABB /* Posts.swift in Sources */,
