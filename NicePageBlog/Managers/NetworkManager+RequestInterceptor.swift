@@ -12,6 +12,7 @@ import SwiftyJSON
 extension NetworkManager: RequestInterceptor {
     
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
+        debugPrint("adapt")
         var request = urlRequest
         
         let accessToken : String! = UserDefaultsManager.shared.getAccessToken() != nil ? UserDefaultsManager.shared.getAccessToken() : ""
@@ -23,17 +24,42 @@ extension NetworkManager: RequestInterceptor {
     
     
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
-        guard request.retryCount < retryLimit else {
+        debugPrint("retry")
+        debugPrint("retry error: \(error)")
+//        guard request.retryCount < retryLimit else {
+//            completion(.doNotRetry)
+//            return
+//        }
+//        refreshToken { isSuccess in
+//            isSuccess ? completion(.retry) : completion(.doNotRetry)
+//        }
+        
+        guard let statusCode = request.response?.statusCode else {
+            
             completion(.doNotRetry)
             return
         }
-        refreshToken { isSuccess in
-            isSuccess ? completion(.retry) : completion(.doNotRetry)
+        
+        debugPrint("retry statusCode : \(statusCode)")
+        
+        switch statusCode {
+        case 200...299:
+            completion(.doNotRetry)
+            
+        default:
+            
+            refreshToken { (success) in
+                
+//                self.validToken = Credential.currentToken
+                completion(.retry)
+                
+            }
+            
         }
     }
     
     func refreshToken(completion: @escaping (_ isSuccess: Bool) -> Void) {
-        
+        debugPrint("refreshToken")
         if let refreshToken = UserDefaultsManager.shared.getRefreshToken() {
             
             let headers: HTTPHeaders = [

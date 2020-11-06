@@ -12,9 +12,6 @@ final class MainData: ObservableObject  {
     
     @Published var loginCheck: Bool = false
     
-    
-    private var userDefaultsManager = UserDefaultsManager()
-    
     lazy var api: Api = {
         return Api()
     }()
@@ -26,6 +23,9 @@ final class MainData: ObservableObject  {
     
     public func checkLogin() {
         
+        debugPrint(UserDefaultsManager.shared.getAccessToken())
+        debugPrint(UserDefaultsManager.shared.getRefreshToken())
+       
         if UserDefaultsManager.shared.getAccessToken() != nil {
             api.loginCheck() { (result) in
                 debugPrint("login check result : \(result)")

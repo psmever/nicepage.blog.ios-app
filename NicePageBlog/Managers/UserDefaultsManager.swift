@@ -43,15 +43,18 @@ class UserDefaultsManager {
     }
     
     func getRefreshToken() -> String? {
+        
         return UserDefaults.standard.string(forKey: Key.refresh_token.rawValue)
     }
     
     func setAccessToken(token: String) {
+        debugPrint(token)
         UserDefaults.standard.set(token, forKey: Key.access_token.rawValue)
         UserDefaults.standard.synchronize()
     }
     
     func setRefreshToken(token: String) {
+        debugPrint(token)
         UserDefaults.standard.set(token, forKey: Key.refresh_token.rawValue)
         UserDefaults.standard.synchronize()
     }

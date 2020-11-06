@@ -9,17 +9,24 @@ import SwiftUI
 
 struct PostDetailView: View {
     
-    var postDetailData: PostDetailData = PostDetailData()
+    @ObservedObject var postDetailData: PostDetailData
     
-    var slug_title: String
+    var slugTitle: String = ""
     
+    init(_ SlugTitle: String , postDetailData: PostDetailData = PostDetailData()) {
+        /// This is example view-mdel implemented for demo purpose.
+        self.postDetailData = postDetailData
+        
+        postDetailData.getPostDetailData(slug_title: SlugTitle)
+    }
+
     var body: some View {
-        Text("PostDetailView")
+        Text(postDetailData.post_slug_title)
     }
 }
 
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetailView(slug_title: "test-test")
+        PostDetailView("test-test")
     }
 }

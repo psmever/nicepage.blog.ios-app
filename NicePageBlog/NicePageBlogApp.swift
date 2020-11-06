@@ -13,20 +13,10 @@ import StoreKit
 class AppDelegate: NSObject, UIApplicationDelegate {
     private var userDefaultsManager = UserDefaultsManager()
 
-    lazy var api: Api = {
-        return Api()
-    }()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//        UserDefaultsManager.shared.deleteAllData()
-
-
-
-//        if let accessToken = UserDefaultsManager.shared.getAccessToken() {
-//            api.loginCheck() { (result) in
-//                debugPrint("login check result : \(result)")
-//            }
-//        }
+        #if DEBUG
+//            UserDefaultsManager.shared.deleteAllData()
+        #endif
         return true
     }
 }

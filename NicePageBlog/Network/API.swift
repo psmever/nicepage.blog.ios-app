@@ -10,9 +10,7 @@ import Alamofire
 import SwiftyJSON
 
 final class Api {
-    
-    private var userDefaultsManager = UserDefaultsManager();
-    
+   
     static let shared: Api = {
         return Api()
     }()
@@ -33,8 +31,8 @@ final class Api {
                 let expires_in: Int = result.expires_in
                 
                 if(access_token.count > 0 && refresh_token.count > 0) {
-                    self.userDefaultsManager.setAccessToken(token: access_token)
-                    self.userDefaultsManager.setRefreshToken(token: refresh_token)
+                    UserDefaultsManager.shared.setAccessToken(token: access_token)
+                    UserDefaultsManager.shared.setRefreshToken(token: refresh_token)
                     completion(true)
                 } else {
                     completion(false)

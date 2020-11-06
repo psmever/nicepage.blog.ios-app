@@ -118,7 +118,6 @@
 				93790A9A255422B600C65FBB /* Data */,
 				938CD8AA2553805A005D8ABB /* Extension */,
 				93EBBC7325524E2100627084 /* Views */,
-				93EBBC7225524DD300627084 /* Controllers */,
 				9312ABCD255153F8002FEFF7 /* Managers */,
 				93D5355D254A55CE002769C8 /* Network */,
 				93215E5D2547C1E2002BB428 /* Common */,
@@ -185,13 +184,6 @@
 				93702DE2254BF23400D0B91F /* API.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		93EBBC7225524DD300627084 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		93EBBC7325524E2100627084 /* Views */ = {
