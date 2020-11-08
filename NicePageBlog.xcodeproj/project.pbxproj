@@ -16,15 +16,23 @@
 		93253BA325471C5E00DEDF37 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93253BA225471C5E00DEDF37 /* MainView.swift */; };
 		93253BA525471C5F00DEDF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93253BA425471C5F00DEDF37 /* Assets.xcassets */; };
 		93253BA825471C5F00DEDF37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93253BA725471C5F00DEDF37 /* Preview Assets.xcassets */; };
+		935056E32558693D00EE7FF5 /* PostListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935056E22558693D00EE7FF5 /* PostListCardView.swift */; };
 		93702DDE254BE30700D0B91F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 93702DDD254BE30700D0B91F /* SwiftyJSON */; };
 		93702DE3254BF23400D0B91F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93702DE2254BF23400D0B91F /* API.swift */; };
 		938CD8B125538096005D8ABB /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938CD8B025538096005D8ABB /* Views.swift */; };
-		938CD8CE2553C590005D8ABB /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938CD8CD2553C590005D8ABB /* Posts.swift */; };
+		938CD8CE2553C590005D8ABB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938CD8CD2553C590005D8ABB /* Post.swift */; };
 		93A22F202554389800BC1D94 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A22F1F2554389800BC1D94 /* MainViewModel.swift */; };
+		93B9D24A25584B7600E86FA5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9D24925584B7600E86FA5 /* LoginView.swift */; };
+		93B9D24F2558503600E86FA5 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9D24E2558503600E86FA5 /* PostListView.swift */; };
+		93B9D2522558509E00E86FA5 /* ObservableBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9D2512558509E00E86FA5 /* ObservableBaseViewModel.swift */; };
+		93B9D256255852CB00E86FA5 /* ObservableSingleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9D255255852CB00E86FA5 /* ObservableSingleViewModel.swift */; };
+		93B9D25A2558532E00E86FA5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9D2592558532E00E86FA5 /* LoginViewModel.swift */; };
+		93B9D25F255853F900E86FA5 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9D25E255853F900E86FA5 /* ViewModelProtocol.swift */; };
 		93D5356E254A9838002769C8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D5356D254A9838002769C8 /* NetworkManager.swift */; };
 		93D53583254AB858002769C8 /* NetworkManager+RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D53582254AB858002769C8 /* NetworkManager+RequestInterceptor.swift */; };
 		93D53586254AB899002769C8 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D53585254AB899002769C8 /* UserDefaultsManager.swift */; };
 		93EBBC7F25526F3400627084 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 93EBBC7E25526F3400627084 /* Toast */; };
+		93F23FF42558561500357103 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F23FF32558561500357103 /* PostListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,13 +46,21 @@
 		93253BA425471C5F00DEDF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93253BA725471C5F00DEDF37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93253BA925471C5F00DEDF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		935056E22558693D00EE7FF5 /* PostListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCardView.swift; sourceTree = "<group>"; };
 		93702DE2254BF23400D0B91F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		938CD8B025538096005D8ABB /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
-		938CD8CD2553C590005D8ABB /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		938CD8CD2553C590005D8ABB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		93A22F1F2554389800BC1D94 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		93B9D24925584B7600E86FA5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		93B9D24E2558503600E86FA5 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		93B9D2512558509E00E86FA5 /* ObservableBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBaseViewModel.swift; sourceTree = "<group>"; };
+		93B9D255255852CB00E86FA5 /* ObservableSingleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableSingleViewModel.swift; sourceTree = "<group>"; };
+		93B9D2592558532E00E86FA5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		93B9D25E255853F900E86FA5 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		93D5356D254A9838002769C8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		93D53582254AB858002769C8 /* NetworkManager+RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+RequestInterceptor.swift"; sourceTree = "<group>"; };
 		93D53585254AB899002769C8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		93F23FF32558561500357103 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +114,7 @@
 		93253B9F25471C5E00DEDF37 /* NicePageBlog */ = {
 			isa = PBXGroup;
 			children = (
+				93B9D25D255853BD00E86FA5 /* Protocol */,
 				93E0652225584947009C30C7 /* Base */,
 				93215E5D2547C1E2002BB428 /* Common */,
 				93D5355D254A55CE002769C8 /* Network */,
@@ -128,7 +145,7 @@
 			children = (
 				9312ABCF25515432002FEFF7 /* Base.swift */,
 				9312ABD32551545A002FEFF7 /* APIErrorResponse.swift */,
-				938CD8CD2553C590005D8ABB /* Posts.swift */,
+				938CD8CD2553C590005D8ABB /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +153,9 @@
 		93790A9A255422B600C65FBB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				93B9D2582558530E00E86FA5 /* Base */,
+				93B9D2592558532E00E86FA5 /* LoginViewModel.swift */,
+				93F23FF32558561500357103 /* PostListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -146,6 +166,23 @@
 				938CD8B025538096005D8ABB /* Views.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		93B9D2582558530E00E86FA5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				93B9D2512558509E00E86FA5 /* ObservableBaseViewModel.swift */,
+				93B9D255255852CB00E86FA5 /* ObservableSingleViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		93B9D25D255853BD00E86FA5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				93B9D25E255853F900E86FA5 /* ViewModelProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		93D5355D254A55CE002769C8 /* Network */ = {
@@ -168,6 +205,9 @@
 		93EBBC7325524E2100627084 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93B9D24925584B7600E86FA5 /* LoginView.swift */,
+				93B9D24E2558503600E86FA5 /* PostListView.swift */,
+				935056E22558693D00EE7FF5 /* PostListCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,11 +298,19 @@
 				93253BA325471C5E00DEDF37 /* MainView.swift in Sources */,
 				93D53586254AB899002769C8 /* UserDefaultsManager.swift in Sources */,
 				9312ABD42551545A002FEFF7 /* APIErrorResponse.swift in Sources */,
-				938CD8CE2553C590005D8ABB /* Posts.swift in Sources */,
+				93B9D2522558509E00E86FA5 /* ObservableBaseViewModel.swift in Sources */,
+				938CD8CE2553C590005D8ABB /* Post.swift in Sources */,
+				93B9D24F2558503600E86FA5 /* PostListView.swift in Sources */,
+				93B9D25F255853F900E86FA5 /* ViewModelProtocol.swift in Sources */,
 				93215E582547BA19002BB428 /* Environment.swift in Sources */,
 				93253BA125471C5E00DEDF37 /* NicePageBlogApp.swift in Sources */,
+				93B9D25A2558532E00E86FA5 /* LoginViewModel.swift in Sources */,
+				935056E32558693D00EE7FF5 /* PostListCardView.swift in Sources */,
 				9312ABD025515432002FEFF7 /* Base.swift in Sources */,
+				93F23FF42558561500357103 /* PostListViewModel.swift in Sources */,
 				938CD8B125538096005D8ABB /* Views.swift in Sources */,
+				93B9D24A25584B7600E86FA5 /* LoginView.swift in Sources */,
+				93B9D256255852CB00E86FA5 /* ObservableSingleViewModel.swift in Sources */,
 				93702DE3254BF23400D0B91F /* API.swift in Sources */,
 				93D53583254AB858002769C8 /* NetworkManager+RequestInterceptor.swift in Sources */,
 			);

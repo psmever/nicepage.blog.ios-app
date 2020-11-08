@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Post: Codable {
+struct Posts: Codable {
     let per_page: String
     let current_page: Int
     let hasmore: Bool

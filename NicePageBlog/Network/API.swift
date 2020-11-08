@@ -57,8 +57,8 @@ final class Api {
         }
     }
     
-    func getPostList(completion: @escaping (Bool, Post?) -> Void) {
-        NetworkManager.shared.request(Environment.ServerBaseURL.absoluteString + "/api/v1/post/1", method: .get) { ( result: Result<Post, ErrorResponse> ) in
+    func getPostList(completion: @escaping (Bool, Posts?) -> Void) {
+        NetworkManager.shared.request(Environment.ServerBaseURL.absoluteString + "/api/v1/post/1", method: .get) { ( result: Result<Posts, ErrorResponse> ) in
             switch result{
             case .success(let result):
                 completion(true, result)

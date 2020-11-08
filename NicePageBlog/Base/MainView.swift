@@ -17,7 +17,10 @@ struct MainView: View {
 //        }else {
 //            return AnyView(LoginView())
 //        }
-        Text("Hello, psmever's Blog")
+//        Text("Hello, psmever's Blog")
+        
+//        return AnyView(LoginView(viewModel: LoginView.ViewModel()))
+        return AnyView(PostListView(viewModel: PostListView.ViewModel()))
     }
 }
 
