@@ -12,11 +12,12 @@ struct MainView: View {
     @ObservedObject var mainViewModel: MainViewModel = MainViewModel()
     
     var body: some View {
-        if mainViewModel.loginCheck {
-            return AnyView(PostsView())
-        }else {
-            return AnyView(LoginView())
-        }
+//        if mainViewModel.loginCheck {
+//            return AnyView(PostsView())
+//        }else {
+//            return AnyView(LoginView())
+//        }
+        Text("Hello, psmever's Blog")
     }
 }
 

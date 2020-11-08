@@ -32,11 +32,6 @@ struct PostItem: Codable {
     let list_created: String
 }
 
-struct TagsItem: Codable {
-    let tag_id: String?
-    let tag_text: String?
-}
-
 struct PostDetail: Codable {
     let post_uuid: String
     let user: UserDetailInfo
@@ -49,4 +44,9 @@ struct PostDetail: Codable {
     let view_count: Int
     let detail_created: String
     let detail_updated: String
+}
+
+struct TagsItem: Codable {
+    let tag_id: String?
+    let tag_text: String?
 }
