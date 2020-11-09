@@ -11,12 +11,12 @@ import CoreData
 extension PostListView {
     
     class ViewModel: ObservableBaseViewModel<PostItem> {
-        
+
         init() {
             super.init(initDataSource: [PostItem]())
         }
-        
-        
+
+
     }
 }
 

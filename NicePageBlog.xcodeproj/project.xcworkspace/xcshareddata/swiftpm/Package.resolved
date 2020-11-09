@@ -11,12 +11,39 @@
         }
       },
       {
+        "package": "Down",
+        "repositoryURL": "https://github.com/iwasrobbed/Down",
+        "state": {
+          "branch": null,
+          "revision": "731f6bbab24ab208ea2d6a944e3f8a8a9d5273c7",
+          "version": "0.9.4"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "0e548b700c7c123dd3b2ac776e90d63a540f084d",
+          "version": "5.15.7"
+        }
+      },
+      {
         "package": "Moya",
         "repositoryURL": "https://github.com/Moya/Moya.git",
         "state": {
           "branch": null,
           "revision": "b3e5a233e0d85fd4d69f561c80988590859c7dee",
           "version": "14.0.0"
+        }
+      },
+      {
+        "package": "Parma",
+        "repositoryURL": "https://github.com/dasautoooo/Parma.git",
+        "state": {
+          "branch": null,
+          "revision": "5aa1de6cdbbd37a38d56f3b55bed94d1dc48ec96",
+          "version": "0.2.0"
         }
       },
       {

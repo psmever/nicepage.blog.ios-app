@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9312ABD025515432002FEFF7 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9312ABCF25515432002FEFF7 /* Base.swift */; };
 		9312ABD42551545A002FEFF7 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9312ABD32551545A002FEFF7 /* APIErrorResponse.swift */; };
+		931D1FA32558F3770009F4EC /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D1FA22558F3770009F4EC /* PostDetailView.swift */; };
+		931D1FA92558F3D20009F4EC /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D1FA82558F3D20009F4EC /* PostDetailViewModel.swift */; };
+		931D1FAC2558F5B00009F4EC /* ObservableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D1FAB2558F5B00009F4EC /* ObservableViewModel.swift */; };
 		93215E4E2547ABCF002BB428 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93215E4D2547ABCF002BB428 /* Launch Screen.storyboard */; };
 		93215E582547BA19002BB428 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93215E572547BA19002BB428 /* Environment.swift */; };
 		93215E612547D99B002BB428 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93215E602547D99B002BB428 /* Alamofire */; };
@@ -32,12 +35,17 @@
 		93D53583254AB858002769C8 /* NetworkManager+RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D53582254AB858002769C8 /* NetworkManager+RequestInterceptor.swift */; };
 		93D53586254AB899002769C8 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D53585254AB899002769C8 /* UserDefaultsManager.swift */; };
 		93EBBC7F25526F3400627084 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 93EBBC7E25526F3400627084 /* Toast */; };
+		93F177E325590CE5005B49C1 /* Parma in Frameworks */ = {isa = PBXBuildFile; productRef = 93F177E225590CE5005B49C1 /* Parma */; };
+		93F177E725590F6C005B49C1 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 93F177E625590F6C005B49C1 /* KingfisherSwiftUI */; };
 		93F23FF42558561500357103 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F23FF32558561500357103 /* PostListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9312ABCF25515432002FEFF7 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		9312ABD32551545A002FEFF7 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		931D1FA22558F3770009F4EC /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		931D1FA82558F3D20009F4EC /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		931D1FAB2558F5B00009F4EC /* ObservableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewModel.swift; sourceTree = "<group>"; };
 		93215E4D2547ABCF002BB428 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		93215E572547BA19002BB428 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; usesTabs = 0; };
 		93253B9D25471C5E00DEDF37 /* NicePageBlog-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NicePageBlog-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +78,9 @@
 			files = (
 				93EBBC7F25526F3400627084 /* Toast in Frameworks */,
 				93702DDE254BE30700D0B91F /* SwiftyJSON in Frameworks */,
+				93F177E325590CE5005B49C1 /* Parma in Frameworks */,
 				93215E612547D99B002BB428 /* Alamofire in Frameworks */,
+				93F177E725590F6C005B49C1 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +166,7 @@
 				93B9D2582558530E00E86FA5 /* Base */,
 				93B9D2592558532E00E86FA5 /* LoginViewModel.swift */,
 				93F23FF32558561500357103 /* PostListViewModel.swift */,
+				931D1FA82558F3D20009F4EC /* PostDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 		93B9D2582558530E00E86FA5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				931D1FAB2558F5B00009F4EC /* ObservableViewModel.swift */,
 				93B9D2512558509E00E86FA5 /* ObservableBaseViewModel.swift */,
 				93B9D255255852CB00E86FA5 /* ObservableSingleViewModel.swift */,
 			);
@@ -208,6 +220,7 @@
 				93B9D24925584B7600E86FA5 /* LoginView.swift */,
 				93B9D24E2558503600E86FA5 /* PostListView.swift */,
 				935056E22558693D00EE7FF5 /* PostListCardView.swift */,
+				931D1FA22558F3770009F4EC /* PostDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +245,8 @@
 				93215E602547D99B002BB428 /* Alamofire */,
 				93702DDD254BE30700D0B91F /* SwiftyJSON */,
 				93EBBC7E25526F3400627084 /* Toast */,
+				93F177E225590CE5005B49C1 /* Parma */,
+				93F177E625590F6C005B49C1 /* KingfisherSwiftUI */,
 			);
 			productName = NicePageBlog;
 			productReference = 93253B9D25471C5E00DEDF37 /* NicePageBlog-Debug.app */;
@@ -265,6 +280,8 @@
 				93702DDC254BE30700D0B91F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				9312AB9E255119AD002FEFF7 /* XCRemoteSwiftPackageReference "Moya" */,
 				93EBBC7D25526F3400627084 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				93F177E125590CE5005B49C1 /* XCRemoteSwiftPackageReference "Parma" */,
+				93F177E525590F6C005B49C1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 93253B9E25471C5E00DEDF37 /* Products */;
 			projectDirPath = "";
@@ -298,8 +315,10 @@
 				93253BA325471C5E00DEDF37 /* MainView.swift in Sources */,
 				93D53586254AB899002769C8 /* UserDefaultsManager.swift in Sources */,
 				9312ABD42551545A002FEFF7 /* APIErrorResponse.swift in Sources */,
+				931D1FA92558F3D20009F4EC /* PostDetailViewModel.swift in Sources */,
 				93B9D2522558509E00E86FA5 /* ObservableBaseViewModel.swift in Sources */,
 				938CD8CE2553C590005D8ABB /* Post.swift in Sources */,
+				931D1FA32558F3770009F4EC /* PostDetailView.swift in Sources */,
 				93B9D24F2558503600E86FA5 /* PostListView.swift in Sources */,
 				93B9D25F255853F900E86FA5 /* ViewModelProtocol.swift in Sources */,
 				93215E582547BA19002BB428 /* Environment.swift in Sources */,
@@ -307,6 +326,7 @@
 				93B9D25A2558532E00E86FA5 /* LoginViewModel.swift in Sources */,
 				935056E32558693D00EE7FF5 /* PostListCardView.swift in Sources */,
 				9312ABD025515432002FEFF7 /* Base.swift in Sources */,
+				931D1FAC2558F5B00009F4EC /* ObservableViewModel.swift in Sources */,
 				93F23FF42558561500357103 /* PostListViewModel.swift in Sources */,
 				938CD8B125538096005D8ABB /* Views.swift in Sources */,
 				93B9D24A25584B7600E86FA5 /* LoginView.swift in Sources */,
@@ -634,6 +654,22 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		93F177E125590CE5005B49C1 /* XCRemoteSwiftPackageReference "Parma" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dasautoooo/Parma.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+		93F177E525590F6C005B49C1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -651,6 +687,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 93EBBC7D25526F3400627084 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		93F177E225590CE5005B49C1 /* Parma */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93F177E125590CE5005B49C1 /* XCRemoteSwiftPackageReference "Parma" */;
+			productName = Parma;
+		};
+		93F177E625590F6C005B49C1 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93F177E525590F6C005B49C1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

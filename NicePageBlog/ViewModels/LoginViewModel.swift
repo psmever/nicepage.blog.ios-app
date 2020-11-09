@@ -10,7 +10,7 @@ import CoreData
 
 extension LoginView {
  
-    class ViewModel: ObservableSingleViewModel {
+    class ViewModel: ObservableViewModel {
         
     }
     

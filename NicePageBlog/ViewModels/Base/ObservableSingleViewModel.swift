@@ -7,4 +7,11 @@
 
 import Foundation
 
-class ObservableSingleViewModel: ObservableObject {}
+class ObservableSingleViewModel<T>: ObservableObject {
+    
+    @Published public var initDataSource: [T]
+    
+    init(initDataSource: [T]) {
+        self.initDataSource = initDataSource
+    }
+}

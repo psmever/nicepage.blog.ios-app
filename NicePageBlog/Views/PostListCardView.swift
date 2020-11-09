@@ -71,7 +71,7 @@ struct PostListCardView: View {
     var imageURL: String
     var category: String = ""
     var heading: String = ""
-    var author: String = ""
+//    var author: String = ""
 
     var body: some View {
        
@@ -89,10 +89,6 @@ struct PostListCardView: View {
                     
                     Text(category)
                         .font(.headline)
-                        .foregroundColor(.secondary)
-
-                    Text(author.uppercased())
-                        .font(.caption)
                         .foregroundColor(.secondary)
                     }
                 .layoutPriority(100)
