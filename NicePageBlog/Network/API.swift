@@ -16,7 +16,7 @@ final class Api {
     }()
     
     
-    func login(email: String, password: String, completion: @escaping (Bool) -> Void) {
+    func login(email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
 
         let PARAM:Parameters = [
             "email": email,
@@ -33,13 +33,13 @@ final class Api {
                 if(access_token.count > 0 && refresh_token.count > 0) {
                     UserDefaultsManager.shared.setAccessToken(token: access_token)
                     UserDefaultsManager.shared.setRefreshToken(token: refresh_token)
-                    completion(true)
+                    completion(true, nil)
                 } else {
-                    completion(false)
+                    completion(false, "토큰 정보를 가지고 오지 못했습니다.")
                 }
             case .failure(let error):
                 debugPrint("\(error.error_message)")
-                completion(false)
+                completion(false, error.error_message)
             }
         }
     }

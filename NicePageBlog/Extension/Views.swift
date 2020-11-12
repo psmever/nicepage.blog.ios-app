@@ -18,7 +18,7 @@ public extension View {
                         return nil
                     }
             }(),
-              dismissButton: dismissButton)
+            dismissButton: dismissButton)
         }
     }
 }
