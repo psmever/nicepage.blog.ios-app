@@ -12,11 +12,9 @@ extension LoginView {
      
     class ViewModel: ObservableViewModel {
     
-        @Published var login_email: String = ""
-        @Published var login_password: String = ""
-        
-        @Published var login_try_state: Bool = false
-        @Published var loginTryErrorMessage: String = ""
+        @Published var loginStatus: Bool = false
+        @Published var inputEmail: String = ""
+        @Published var inputPassword: String = ""
         
         
     }
@@ -26,7 +24,17 @@ extension LoginView {
 extension LoginView.ViewModel: ViewModelProtocol {
     
     func initData() {
-        
+        if UserDefaultsManager.shared.getAccessToken() != nil {
+            Api().loginCheck() { (result) in
+                if result {
+                    self.loginStatus = true
+                } else {
+                    self.loginStatus = false
+                }
+            }
+        } else {
+            self.loginStatus = false
+        }
     }
     
     func deinitData() {
@@ -35,17 +43,14 @@ extension LoginView.ViewModel: ViewModelProtocol {
     }
     
     
-    func handleTabLoginButton() {
-        
-        Api().login(email: self.login_email, password: login_password) { (status, message) in
-            
+    func handleTabLoginButton(completion: @escaping (Bool, String?) -> Void) {
+        Api().login(email: self.inputEmail, password: self.inputPassword) { (status, message) in
             if status {
-                self.login_try_state = true
+                self.loginStatus = true
+                completion(true, nil)
             } else {
-                self.login_try_state = false
-                if let errorMessage = message {
-                    self.loginTryErrorMessage = errorMessage
-                }
+                self.loginStatus = false
+                completion(false, message)
             }
         }
 

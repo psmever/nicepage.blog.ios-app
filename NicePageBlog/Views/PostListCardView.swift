@@ -78,7 +78,7 @@ struct PostListCardView: View {
         VStack(alignment: .leading) {
             PostImage(url: imageURL)
                 .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: .infinity, alignment: .center)
+                .frame(maxWidth: .infinity, maxHeight: 150, alignment: .center)
             HStack {
                 VStack(alignment: .leading){
                     Text(heading)

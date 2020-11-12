@@ -36,7 +36,9 @@ struct NicePageBlogApp: App {
         #elseif RELEASE
             debugPrint(":: Release App Start ::")
         #endif
+
     }
+    
 
     var body: some Scene {
         WindowGroup {

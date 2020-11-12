@@ -10,76 +10,104 @@ import SwiftUI
 struct LoginView: View {
     
     @ObservedObject var viewModel: ViewModel
+        
+
+    @State var loginStatus: Bool = false
     
-    @State private var loginButtonClick: Bool = false
-    @State private var login_validated_alert: Bool = false
-    @State private var login_check_alert: Bool = false
     
-    private var thisValidated: Bool {
-        !self.viewModel.login_email.isEmpty && !self.viewModel.login_password.isEmpty
-    }
+    
+    @State var alertState: Bool = false
+    @State var alertMessage: String = ""
+    
+    public var viewIndex: Int = 1
+    public var thisValidated: Bool = true
     
     let verticalPaddingForForm = 40.0
     
     var body: some View {
         
-        Background {
-            
-            ZStack {
-                
-                VStack(spacing: CGFloat(verticalPaddingForForm)) {
-                    
-                    Text("psmever's Blog")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                    HStack {
-                        Image(systemName: "person").foregroundColor(.secondary)
-                        TextField("이메일", text: self.$viewModel.login_email).foregroundColor(Color.black)
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    
-                    HStack {
-                        Image(systemName: "person").foregroundColor(.secondary)
-                        TextField("비밀번호", text: self.$viewModel.login_password).foregroundColor(Color.black)
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    
-                    Button(action: {
+        if loginStatus {
+            PostListView(viewModel: PostListView.ViewModel())
+        } else {
+            Background {
+                    ZStack {
                         
-                        if(!thisValidated) {
-                            self.login_validated_alert = true
-                            return
-                        } else {
-                            self.viewModel.handleTabLoginButton()
-                        }
-
-                    }) {
-                        Text("로그인")
-                        .padding()
+                        VStack(spacing: CGFloat(verticalPaddingForForm)) {
+                            
+                            Text("psmever's Blog")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                            HStack {
+                                Image(systemName: "person").foregroundColor(.secondary)
+                                TextField("이메일", text: self.$viewModel.inputEmail).foregroundColor(Color.black)
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            
+                            HStack {
+                                Image(systemName: "person").foregroundColor(.secondary)
+                                SecureField("비밀번호", text: self.$viewModel.inputPassword).foregroundColor(Color.black)
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            
+                            Button(action: {
+                                
+                                if self.loginValidated() {
+                                    self.viewModel.handleTabLoginButton(completion: { (status, message) in
+                                        
+                                        if status {
+                                            self.loginStatus = true
+                                        } else {
+                                            self.alertState = true
+                                            self.alertMessage = message ?? "로그인에 실패 했습니다."
+                                        }
+                                    })
+                                }
+                                
+                            }) {
+                                Text("로그인")
+                                .padding()
+                            }
+                            .background(Color.black)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                            
+                        }.padding(.horizontal, CGFloat(verticalPaddingForForm))
+                        .alert(isPresented: $alertState, title: "경고", message: self.alertMessage)
                     }
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    
-                }.padding(.horizontal, CGFloat(verticalPaddingForForm))
-                .alert(isPresented: $login_validated_alert, title: "경고", message: "로그인 정보를 입력해 주세요.")
+           
+            }.onTapGesture {
+                self.resignFirstResponder()
             }
-        
-        }.onTapGesture {
-            self.resignFirstResponder()
-        }
-        .onAppear() {
-            
+            .onAppear() {
+                self.viewModel.initData()
+            }
         }
     }
     
     private func resignFirstResponder() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
+    fileprivate func loginValidated() -> Bool {
+        
+        if(self.viewModel.inputEmail == "") {
+            self.alertMessage = "로그인 이메일을 입력해 주세요."
+            self.alertState.toggle()
+            return false
+        }
+        
+        if (self.viewModel.inputPassword == "") {
+            self.alertMessage = "로그인 비밀 번호를 입력해 주세요."
+            self.alertState.toggle()
+            return false
+        }
+        
+        return true
     }
 }
 
@@ -97,13 +125,6 @@ struct Background<Content: View>: View {
         .overlay(content)
     }
 }
-
-
-
-
-
-
-
 
 
 struct LoginView_Previews: PreviewProvider {

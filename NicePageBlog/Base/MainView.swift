@@ -12,7 +12,6 @@ struct MainView: View {
     @ObservedObject var mainViewModel: MainViewModel = MainViewModel()
 
     var body: some View {
-        debugPrint(mainViewModel.loginCheck)
         if mainViewModel.loginCheck {
             return AnyView(PostListView(viewModel: PostListView.ViewModel()))
         } else {
